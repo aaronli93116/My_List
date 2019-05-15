@@ -1,0 +1,36 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.Show {
+  position: relative;
+  height: 14rem;
+}
+.Show:hover > div > button {
+  cursor: pointer;
+  display: inline;
+}
+button {
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  /* transform: translate(0%, -0.26rem); */
+}
+.List {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+  margin: 1rem;
+}
+
+li > div {
+  display: inline-block;
+}
+
+img {
+  height: 14rem;
+}
