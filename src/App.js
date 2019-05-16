@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Netflix</h1>
         <h2>My List</h2>
         <ul className="List">
           {this.props.mylist.map((ele, index) => {
@@ -21,7 +22,12 @@ class App extends Component {
               <li className="Show" key={ele.id}>
                 <div>
                   <ListElement ele={ele} />
-                  <button onClick={() => this.removeEle(index)}>Remove</button>
+                  <button
+                    className="btn1"
+                    onClick={() => this.removeEle(index)}
+                  >
+                    Remove
+                  </button>
                 </div>
               </li>
             );
@@ -34,7 +40,9 @@ class App extends Component {
               <li className="Show" key={ele.id}>
                 <div>
                   <ListElement ele={ele} />
-                  <button onClick={() => this.addEle(index)}>ADD</button>
+                  <button className="btn2" onClick={() => this.addEle(index)}>
+                    ADD
+                  </button>
                 </div>
               </li>
             );

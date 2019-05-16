@@ -1,6 +1,8 @@
-.App {
+body {
   font-family: sans-serif;
-  text-align: center;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
 }
 .Show {
   position: relative;
@@ -15,6 +17,7 @@ button {
   position: absolute;
   bottom: 0%;
   right: 0%;
+  width: 100%;
   /* transform: translate(0%, -0.26rem); */
 }
 .List {
@@ -33,4 +36,12 @@ li > div {
 
 img {
   height: 14rem;
+}
+.btn1 {
+  background-color: rgb(49, 179, 161);
+  color: black;
+}
+.btn2 {
+  background-color: rgb(126, 66, 204);
+  color: black;
 }
