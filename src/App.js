@@ -5,6 +5,9 @@ import * as actions from "./Actions";
 import "./styles.css";
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getlist();
+  }
   removeEle = id => {
     this.props.removeEle(id);
   };
@@ -67,6 +70,9 @@ const mapDispatchToProps = dispatch => {
     },
     addEle: id => {
       dispatch(actions.addEle(id));
+    },
+    getlist: () => {
+      dispatch(actions.getlist());
     }
   };
 };

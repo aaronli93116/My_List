@@ -10,3 +10,8 @@ export function addEle(id) {
     id: id
   };
 }
+export function getlist() {
+  return {
+    type: "GET_DATA"
+  };
+}
