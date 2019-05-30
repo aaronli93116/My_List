@@ -1,15 +1,30 @@
-import data from "../Data";
 const initState = {
-  mylist: data.mylist,
-  recommendations: data.recommendations
+  isFetching: false,
+  mylist: [],
+  recommendations: [],
+  err: null
 };
 
 const listReducer = (state = initState, action) => {
   switch (action.type) {
-    case "GET_DATA":
+    case "DATA_FETCH_START":
       return {
-        mylist: state.mylist,
-        recommendations: state.recommendations
+        ...state,
+        isFetching: true
+      };
+    case "DATA_FETCH_FAIL":
+      return {
+        ...state,
+        error: action.error,
+        isFetching: false
+      };
+    case "DATA_FETCH_SUCCESS":
+      return {
+        ...state,
+        isFetching: false,
+        err: null,
+        mylist: action.data[0].mylist,
+        recommendations: action.data[0].recommendations
       };
     case "REMOVE_ELE":
       return {
